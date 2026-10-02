@@ -1,6 +1,8 @@
 #include "include/ATM.h"
 #include "include/BaseDisplay.h"
 
+// test comment
+
 ATM::ATM(Bank* bank, BaseDisplay* display)
 {
     // testing codeql

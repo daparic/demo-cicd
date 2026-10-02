@@ -20,12 +20,12 @@ jobs:
         run: cpptestcli -config "builtin://Effective C++" -report report -property report.format=sarif -input cpptestscan.bdf -compiler gcc_13-64
       - name: 4) Upload results (SARIF)
         if: always()
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: report/report.sarif
       - name: 5) Archive reports
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: CpptestReports
           path: report/*.*
